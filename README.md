@@ -2,6 +2,12 @@
 
 Genshin Story 已经进化为一个先进的 AI 对话平台，您可以选择并扮演游戏中的角色，通过自然语言与庞大的游戏知识库进行智能交互和探索。
 
+## 项目来源
+
+本仓库 [`Furinelle/genshinstory-cache`](https://github.com/Furinelle/genshinstory-cache) 来源于 [`kawayiYokami/GenshinStory`](https://github.com/kawayiYokami/GenshinStory)，用于保存和发布本地可直接读取的游戏资料、Markdown 文档与前后端检索工程。
+
+当前仓库也作为 [`Furinelle/furina`](https://github.com/Furinelle/furina) 的可选本地资料缓存使用；`furina` 会读取本仓库的 `web/docs-site/public/domains/gi/docs` 来补查原神相关内容。
+
 ## 功能特性
 
 - **沉浸式多角色 AI 对话**:
@@ -94,11 +100,13 @@ genshinstory-cache/web/docs-site/public/domains/gi/docs
 
 ## 最简部署（从克隆开始）
 
-仓库地址：`https://github.com/kawayiYokami/GenshinStory/tree/feature/backend-tantivy`
+当前缓存仓库地址：`https://github.com/Furinelle/genshinstory-cache`
+
+上游来源项目：`https://github.com/kawayiYokami/GenshinStory`
 
 ```bash
-git clone -b feature/backend-tantivy --single-branch https://github.com/kawayiYokami/GenshinStory.git
-cd GenshinStory
+git clone https://github.com/Furinelle/genshinstory-cache.git
+cd genshinstory-cache
 corepack enable
 corepack prepare pnpm@latest --activate
 pnpm --dir web/docs-site install
