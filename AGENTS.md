@@ -51,6 +51,20 @@ VITE_SEARCH_MODE=backend
 VITE_BACKEND_URL=http://localhost:8000
 ```
 
+### Furina 本地缓存连接
+
+[`Furinelle/furina`](https://github.com/Furinelle/furina) 可以把本仓库作为可选本地原神资料缓存连接使用。推荐将两个仓库放在同一父目录：
+
+```text
+GitHub/
+├── furina/
+└── genshinstory-cache/
+```
+
+`furina` 的 wiki 运行时默认查找 `../genshinstory-cache`，并读取本仓库的 `web/docs-site/public/domains/gi/docs`。如果仓库不在同级目录，可在 `furina` 侧设置 `GENSHIN_STORY_ROOT`，或调用 wiki 工具时传入 `--root <genshinstory-cache 根目录>`。
+
+该连接只依赖本地 Markdown 文件，不需要启动本仓库前端或后端。`furina` 侧可自行生成 `.cache/furina-wiki/` 本地索引用于加速搜索。
+
 ## 架构概览
 
 ### 前端目录结构
